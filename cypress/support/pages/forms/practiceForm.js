@@ -18,10 +18,12 @@ export class PracticeForm {
     cy.get(path.music).check({ force: true });
     cy.fixture(text.photoNama).as("photo");
     cy.get(path.chooseFile).selectFile("@photo");
+    cy.get(path.add).should("exist")
+      .then(($iframe) => {cy.wrap($iframe).invoke("remove");});
     cy.get(path.currentAdress).type(text.currentAdress);
-    cy.get(path.state).click({force: true});
+    cy.get(path.state).click();
     cy.get(path.stateName).click({force: true});
-    cy.get(path.city).click({force: true});
+    cy.get(path.city).click();
     cy.get(path.cityName).click({force: true});
     cy.get(path.submit).click({ force: true });
   }

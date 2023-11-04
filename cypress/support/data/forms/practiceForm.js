@@ -26,6 +26,7 @@ module.exports = {
     modal: ".modal-body",
     rows: "tbody > tr",
     closeModal: "#closeLargeModal",
+    add:"#adplus-anchor",
   },
 
   text: {
