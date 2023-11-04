@@ -12,3 +12,9 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
+
+      - name: Upload report
+        uses: actions/upload-artifact@master
+        with:
+          name: E2E Test Reports
+          path: report/
