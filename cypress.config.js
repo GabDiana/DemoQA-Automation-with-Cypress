@@ -14,6 +14,14 @@ module.exports = defineConfig({
   },
   e2e: {
     testIsolation: false,
+    blockHosts:['pagead2.googlesyndication.com',
+                'serving.stat-rock.com',
+                'securepubads.g.doubleclick.net',
+                'googleads.g.doubleclick.net',
+                'www.google.com',
+                'cdn.ad.plus',
+                'cdn.prod.uidapi.com',
+                'www.google-analytics.com'],
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
       on('task', {downloadFile});
