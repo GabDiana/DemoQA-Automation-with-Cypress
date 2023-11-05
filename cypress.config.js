@@ -13,6 +13,9 @@ module.exports = defineConfig({
     inlineAssets: true,
   },
   e2e: {
+     env: {
+    CYPRESS_RECORD_KEY: '8d1c234f-0aef-4b74-a67d-25cd24e7964b',
+  },
     testIsolation: false,
     blockHosts:['pagead2.googlesyndication.com',
                 'serving.stat-rock.com',
