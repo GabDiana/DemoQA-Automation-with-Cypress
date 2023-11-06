@@ -4,7 +4,7 @@ import {path,text}from '../../data/elements/radioButton'
 export class RadioButton{
 
     static selectYesOption(){
-        cy.get(path.yesButton).click()
+        cy.get(path.yesButton).click( {force: true})
         
     }
     static verifyYesOption(){
@@ -13,7 +13,7 @@ export class RadioButton{
     }
 
     static selectImpressiveOption(){
-        cy.get(path.impressiveButton).click()
+        cy.get(path.impressiveButton).click( {force: true})
     }
 
     static verifyImpressiveOption(){

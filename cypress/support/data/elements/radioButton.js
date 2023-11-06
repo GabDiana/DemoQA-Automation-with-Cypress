@@ -1,9 +1,9 @@
 module.exports = {
   path: {
-    yesButton: ".col-md-6 > div:nth-child(2) > div:nth-child(2)",
-    impressiveButton: ".col-md-6 > div:nth-child(2) > div:nth-child(3)",
+    yesButton: "#yesRadio",
+    impressiveButton: "#impressiveRadio",
     noButton: "#noRadio",
-    output: ".mt-3",
+    output: ".col-md-6 > div:nth-child(2) > p > span",
   },
   text: {
     yes: "Yes",
