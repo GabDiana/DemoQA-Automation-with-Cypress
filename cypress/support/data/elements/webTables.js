@@ -1,3 +1,5 @@
+import{faker}from'@faker-js/faker'
+
 module.exports = {
   path: {
     //buttons
@@ -34,19 +36,19 @@ module.exports = {
   },
   text: {
     add: "Add",
-    firstName: "Anna",
-    lastName: "Loran",
-    email: "anna.loran@test.com",
+    firstName: faker.person.firstName(),
+    lastName: faker.person.lastName(),
+    email: faker.internet.email(),
     emailWithoutDot: "anna.loran@testcom",
     emailWithoutAt: "anna.lorantest.com",
-    age: "5",
-    salary: "7000",
-    department: "IT",
-    newFirstName: "new Anna",
-    newLastName: "new Loran",
-    newEmail: "new.anna.loran@test.com",
-    newAge: "56",
-    newSalary: "79000",
-    newDepartment: "HR",
+    age: faker.number.int({ min: 18, max: 99 }),
+    salary: faker.number.int({ min: 1800, max: 9900 }),
+    department: faker.person.jobArea(),
+    newFirstName: faker.person.firstName(),
+    newLastName: faker.person.lastName(),
+    newEmail: faker.internet.email(),
+    newAge: faker.number.int({ min: 18, max: 99 }),
+    newSalary: faker.number.int({ min: 1800, max: 9900 }),
+    newDepartment: faker.person.jobArea(),
   },
 };

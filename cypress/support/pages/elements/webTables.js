@@ -116,7 +116,7 @@ export class WebTables {
   }
 
   static deleteOneRow() {
-    cy.get(path.rowsPerPage).children().contains(text.firstName).as("row");
+    cy.get(path.rowsPerPage).children().contains(text.newFirstName).as("row");
     cy.get("@row").siblings().eq(5).children().children().eq(1).click();
   }
 
